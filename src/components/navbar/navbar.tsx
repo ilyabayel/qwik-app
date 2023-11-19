@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 
 export const Navbar = component$(() => (
-  <nav class="h-10 w-full bg-white shadow-lg">
+  <header class="fixed left-0 right-0 top-0 h-10 w-full bg-white/50 text-black shadow-lg backdrop-blur dark:bg-black/50 dark:text-white">
     <div class="container mx-auto flex h-full items-center justify-between">
       <div class="flex items-center">
         <img
@@ -14,20 +14,20 @@ export const Navbar = component$(() => (
         />
         <h1 class="ml-2 text-xl font-bold">Colorful</h1>
       </div>
-      <ul class="flex h-full items-center gap-3">
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li>
-          <Link href="/contact-us">Contact us</Link>
-        </li>
-        <li>
-          <Link href="/blog">Blog</Link>
-        </li>
-      </ul>
+      <nav class="flex h-full items-center gap-3">
+        <Link href="/" class="underline">
+          Home
+        </Link>
+        <Link href="/about" class="underline">
+          About
+        </Link>
+        <Link href="/contact-us" class="underline">
+          Contact us
+        </Link>
+        <Link href="/blog" class="underline">
+          Blog
+        </Link>
+      </nav>
     </div>
-  </nav>
+  </header>
 ));
